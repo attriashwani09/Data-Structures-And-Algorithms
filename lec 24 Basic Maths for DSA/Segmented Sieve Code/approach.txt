@@ -1,0 +1,58 @@
+// Segmented Sieve (Prime Numbers in a Range)
+
+// The Segmented Sieve is an optimized version of the Sieve of Eratosthenes used to find prime numbers in a range [L, R] when R is very large.
+
+// Instead of creating a huge array up to R, we:
+
+// Find primes up to √R.
+
+// Use those primes to mark multiples in the range [L, R].
+
+// This reduces memory usage significantly.
+
+// Why Segmented Sieve is Needed
+
+// Normal sieve works well for numbers up to about 10⁷–10⁸.
+// But if R is 10¹², we cannot create an array of that size.
+
+// Segmented sieve solves this by only storing numbers in the required range.
+
+// Example:
+
+// Find primes between 100 and 130
+
+// Instead of storing primes up to 130, we only store 31 numbers (130-100+1).
+
+// Steps of the Algorithm
+// 1️⃣ Find primes up to √R
+
+// Use the normal sieve to compute primes up to sqrt(R).
+
+// 2️⃣ Create range array
+
+// Create an array isPrime[R-L+1] and initialize all as true.
+
+// 3️⃣ Mark multiples
+
+// For every prime p ≤ √R:
+
+// Find the first multiple of p inside [L,R]:
+
+// firstMultiple = max(p*p, ceil(L/p)*p)
+
+// Then mark:
+
+// isPrime[j - L] = false
+
+// for all multiples.
+
+// 4️⃣ Remaining numbers are prime 
+
+
+
+Time Complexity
+Simple sieve: O(√R log log √R)
+Marking range: O((R-L+1) log log R)
+
+Memory:
+O(√R + (R-L+1))
