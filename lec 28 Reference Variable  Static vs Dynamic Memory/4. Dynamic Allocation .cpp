@@ -3,6 +3,7 @@ using namespace std;
 
 int main(){  
 
+    // Dynamic Allocation : it means memory is taken from heap and at runtime , so size can be decided during execution. 
 
 
     int n;
@@ -29,7 +30,7 @@ int main(){
 
    delete[] arr;  // delete : used to de- allocate dynamic memory . 
 
-   
+
 } 
 
 
