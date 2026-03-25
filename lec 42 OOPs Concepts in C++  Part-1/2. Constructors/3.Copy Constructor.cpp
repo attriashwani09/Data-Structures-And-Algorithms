@@ -6,6 +6,7 @@ class Hero{
     int health ;
     char level ;
 
+    // This is a copy Constructor . 
     Hero( Hero &temp){
         
        this ->health = temp.health ;
@@ -33,4 +34,10 @@ int main() {
 
     S.print() ;
     A.print() ;
-}
+} 
+
+// Output : 
+// Health -> 100
+// Level -> A
+// Health -> 100
+// Level -> A
