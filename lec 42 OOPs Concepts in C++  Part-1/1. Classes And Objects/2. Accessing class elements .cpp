@@ -11,7 +11,12 @@ class Hero{
     public :
 
     int health ;
-    char level ;
+    char level ; 
+
+    void print() {
+        cout << "health -> " << health << endl ;
+        cout << "level -> " << level << endl ;
+    }
 
 } ;
 
@@ -19,11 +24,14 @@ int main() {
 
     Hero h1 ;
 
+    // We can access the data members and member functions with the help of ( . ) operator .
     h1.health = 10 ; 
     h1.level = 'A' ;
 
     cout << h1.health << endl ;
-    cout << h1.level << endl ;
+    cout << h1.level << endl ; 
+
+    h1.print() ;
 
 
 }
