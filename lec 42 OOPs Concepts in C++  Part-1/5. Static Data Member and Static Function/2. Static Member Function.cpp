@@ -8,6 +8,7 @@ using namespace std ;
 
 class Hero{
 
+    public :
     static int count ;
 
     Hero() {
@@ -19,10 +20,21 @@ class Hero{
         cout << "Total Heroes : " << count << endl ; 
     } 
 
-} 
+} ;
 
 int Hero::count = 0 ;
 
-int main() {
+int main() { 
 
-}
+    Hero h1 , h2 , h3 ; 
+
+    Hero::displayCount() ; 
+
+    h1.displayCount() ;
+
+} 
+
+
+// Output : 
+// Total Heroes : 3
+// Total Heroes : 3
