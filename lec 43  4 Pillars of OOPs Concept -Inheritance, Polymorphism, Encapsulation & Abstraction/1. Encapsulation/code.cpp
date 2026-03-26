@@ -1,5 +1,7 @@
 #include<iostream>
-using namespace std; 
+using namespace std;  
+
+// Encapsulation : it is a core principle of oops that involves binding the data (variables) and functions (methods) that operates on the data into a single unit class .
 
 class Hero{
 
